@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3개요</title>
+    <style>
+        div {color: blue;}
+    </style>
+    <link rel="stylesheet" href="css/01hellocss.css">
+</head>
+<body>
+    <h1>CSS3개요</h1>
+    <h2>stylesheet</h2>
+        <p>웹페이지의 스타일과 내용적인 부분을 서로 분리해서 내용에 디자인을 적용하기 위해 작성하는 서식</p>
+        <p>문서작성과 디자인을 분리하면</p>
+        <p>1. 협업, 스타일 변경시 유지보수 용이</p>
+        <p>2. 태그만으로 구현할 수 없는 기능 수행</p>
+        <p>3. 캐시를 이용한 전송 및 로딩 시간 단축</p>
+        <p>CSS1 : 1996 CSS2 : 1998 CSS3 : 2005</p>
+
+    <h2>CSS3 문법</h2>
+        <img src="img/stylesheet.png">
+        <p>선택자<sup>selector</sup> : 스타일을 적용하고자 하는 대상(html요소)을 의미</p>
+        <p>선언블록 : 하나 이상 css 선언문을 의미, 선언문은 보통 속성과 속성값으로 구성</p>
+        <p>각 선언문은 ;으로 구분</p>
+        <p>속성 : 스타일을 설정할 수 있는 개별 항목을 의미</p>
+        <p>속성값 : 스타일에 적용 가능한 키워드나 값, 단위를 의미</p>
+
+    <h2>CSS 사용위치</h2>
+        <p>인라인 스타일시트 : html 요소 내에 style이라는 속성을 사용해서<br>
+                               CSS 스타일을 적용하는 방법(국지적스타일, 특정요소)</p>
+
+        <p>내부 스타일시트 : html문서의 head 태그 내에 style이라는 태그를 사용해서<br>
+                             CSS 스타일을 적용하는 방법(지역적스타일, 특정파일)</p>
+
+        <p>외부 스타일시트: html문서의 head 태그 내에 link이라는 태그를 사용해서<br>
+                            외부 css파일을 통해 CSS 스타일을 적용하는 방법 (추천!)(전역적스타일, 다수 파일)</p>
+
+            <div style="color: red">시간은 금이라구, 친구!!!</div>
+            <div>시간은 금이라구, 친구!!!</div>
+            <div>시간은 금이라구, 친구!!!</div>
+
+    <h2>CSS 우선순위</h2>
+        <img src="img/priority.png">
+        <p>스타일 적용에 우선순위를 두어 html요소가 어떤 css스타일에 영향을 받을 지 알 수 있음</p>
+        <p>스타일 적용순서는 cascading이라는 용어처럼 위에서 아래로 반영됨(선언된 순서에 영향을 받기도 함)</p>
+        <p>한편, 이러한 우선순위를 무시하고 우선적으로 스타일을 적용하고 싶으면 !important 지시자를 사용</p>
+
+</body>
+</html>
