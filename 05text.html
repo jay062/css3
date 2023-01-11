@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS텍스트 관련 속성</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        #font p:first-child{font-size: 35px; background: yellow}
+        /* html 기본 폰트 크기 : 16px (0.42cm) */
+
+        #font p:nth-child(2){font-family:"맑은 고딕",serif; font-size: 20px; background: greenyellow}
+
+        #font p:nth-child(3){font-family:궁서,serif; font-size: 20px; background: aliceblue; font-weight: bold}
+
+        #font p:nth-child(4){font-family:바탕체,serif; font-size: 20px; color:darkorchid; font-style: italic}
+
+        #font p:nth-child(5){font: italic bold 25px 맑은 고딕;}
+
+        /* 텍스트 기본 줄간격 : 120% */
+        #line p {width: 50%}
+        #line p:first-child {line-height: 180%}
+        #line p:last-child {line-height: 90%}
+
+        /* 글자간격조정 */
+        #logo p:first-child{letter-spacing: 20px}
+        #logo p:nth-child(2){letter-spacing: 20px}
+        #logo p:first-child{letter-spacing: -5px}
+
+        /* 단어간격조정 */
+        #logo2 p:first-child{word-spacing: 20px}
+        #logo2 p:nth-child(2){word-spacing: 20px}
+        #logo2 p:first-child{word-spacing: -5px}
+
+        /* 텍스트수평정렬  ; center, right ,left */
+        #align p:first-child{text-align: right}
+        #align p:nth-child(2){text-align: center}
+        #align p:last-child{text-align: left}
+
+        /* 텍스트꾸미기 ; uderline, none, overline */
+        #deco p:first-child{text-decoration: underline }
+        #deco p:nth-child(2){text-decoration: overline}
+        #deco p:last-child{text-decoration:line-through }
+
+    </style>
+</head>
+<body>
+    <h1>CSS텍스트 관련 속성</h1>
+    <h2>개요</h2>
+        <p>텍스트 크기, 글꼴, 스타일, 텍스트의 정렬등을 다룸</p>
+
+    <h2>font-xxx 속성</h2>
+        <p>font-size : 텍스트의 크기</p>
+        <p>font-family : 텍스트의 글꼴</p>
+        <p>font-weight : 텍스트의 진하기</p>
+        <p>font-style : 텍스트의 스타일</p>
+        <p>font-xxx 텍스트의 단축 표기 : 스타일, 대소문자변환, 굵기, 크기, 줄간격, 글꼴</p>
+
+            <div id="font">
+                <p>계엄을 선포한 때에는 대통령은 지체없이 국회에 통고하여야 한다.</p>
+                <p>군인은 현역을 면한 후가 아니면 국무위원으로 임명될 수 없다.</p>
+                <p>선거와 국민투표의 공정한 관리 및 정당에 관한 사무를 처리하기 위하여 선거관리위원회를 둔다.</p>
+                <p>모든 국민은 언론·출판의 자유와 집회·결사의 자유를 가진다.</p>
+                <p>헌법개정은 국회재적의원 과반수 또는 대통령의 발의로 제안된다.</p>
+            </div>
+
+    <h2>line-height</h2>
+            <div id="line">
+                <p>언론·출판에 대한 허가나 검열과 집회·결사에 대한 허가는 인정되지 아니한다.
+                   언론·출판에 대한 허가나 검열과 집회·결사에 대한 허가는 인정되지 아니한다.
+                   언론·출판에 대한 허가나 검열과 집회·결사에 대한 허가는 인정되지 아니한다.
+                   언론·출판에 대한 허가나 검열과 집회·결사에 대한 허가는 인정되지 아니한다.
+                   언론·출판에 대한 허가나 검열과 집회·결사에 대한 허가는 인정되지 아니한다.
+                   언론·출판에 대한 허가나 검열과 집회·결사에 대한 허가는 인정되지 아니한다.
+                   언론·출판에 대한 허가나 검열과 집회·결사에 대한 허가는 인정되지 아니한다.
+                </p>
+                <p>국무위원은 국무총리의 제청으로 대통령이 임명한다. 국군의 조직과 편성은 법률로 정한다
+                    국무위원은 국무총리의 제청으로 대통령이 임명한다. 국군의 조직과 편성은 법률로 정한다
+                    국무위원은 국무총리의 제청으로 대통령이 임명한다. 국군의 조직과 편성은 법률로 정한다
+                    국무위원은 국무총리의 제청으로 대통령이 임명한다. 국군의 조직과 편성은 법률로 정한다
+                    국무위원은 국무총리의 제청으로 대통령이 임명한다. 국군의 조직과 편성은 법률로 정한다
+                    국무위원은 국무총리의 제청으로 대통령이 임명한다. 국군의 조직과 편성은 법률로 정한다
+                    국무위원은 국무총리의 제청으로 대통령이 임명한다. 국군의 조직과 편성은 법률로 정한다
+                </p>
+            </div>
+
+    <h2>letter-spacing</h2>
+        <p>텍스트 내 글자 사이 간격 조정</p>
+        <div id="logo">
+            <p>Marvel's Avengers : Infinity War</p>
+            <p>Marvel's Avengers : Infinity War</p>
+            <p>Marvel's Avengers : Infinity War</p>
+        </div>
+
+    <h2>word-spacing</h2>
+        <p>텍스트 내 단어 사이 간격 조정</p>
+
+            <div id="logo2">
+                <p>Marvel's Avengers : Infinity War</p>
+                <p>Marvel's Avengers : Infinity War</p>
+                <p>Marvel's Avengers : Infinity War</p>
+            </div>
+
+    <h2>text-align</h2>
+        <p>텍스트의 수평방향 정렬 설정</p>
+
+            <div id="align">
+                <p>시간은 금이라구, 친구</p>
+                <p>시간은 금이라구, 친구</p>
+                <p>시간은 금이라구, 친구</p>
+            </div>
+
+    <h2>text-decoration</h2>
+    <p>텍스트의 수평방향 정렬 설정</p>
+
+    <div id="deco">
+        <p>시간은 금이라구, 친구</p>
+        <p>시간은 금이라구, 친구</p>
+        <p>시간은 금이라구, 친구</p>
+    </div>
+
+
+</body>
+</html>

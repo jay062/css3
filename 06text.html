@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS고급텍스트 관련 속성</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        /* 텍스트 처리 */
+        #space p {width: 200px; height: 200px; border: 1px solid blue; padding: 20px ; margin: 150px 0}
+        #space p:first-child{white-space: nowrap}
+        #space p:nth-child(2){white-space:pre}
+        #space p:last-child{white-space: pre-wrap}
+
+        /* 텍스트넘침 처리 */
+        #overflow p {width: 200px; height: 200px; border: 1px solid red; padding: 20px ; margin: 150px 0}
+        #overflow p:first-child{overflow: hidden}
+        #overflow p:nth-child(2){overflow:hidden; text-overflow: ellipsis; white-space: nowrap}
+        #overflow p:last-child{overflow:hidden; text-overflow: clip; white-space: nowrap}
+
+        /* 텍스트그림자 */
+        #shadow p {font-size: 50px; font-weight: bold}
+        #shadow p:first-child{text-shadow: 5px 5px 0 gray}
+        #shadow p:nth-child(2){text-shadow: 5px 5px 5px gray}
+        #shadow p:last-child{text-shadow: -5px -5px 5px gray; letter-spacing: 30px}
+    </style>
+
+</head>
+<body>
+    <h1>CSS고급텍스트 관련 속성</h1>
+    <h2>white-space</h2>
+        <p>텍스트의 공백, 들여쓰기, 줄바꿈에 대한 처리를 설정</p>
+
+        <div id="space">
+          <p>계엄을 선포한 때에는 대통령은 지체없이 국회에 통고하여야 한다.
+             계엄을 선포한 때에는 대통령은 지체없이 국회에 통고하여야 한다.
+             계엄을 선포한 때에는 대통령은 지체없이 국회에 통고하여야 한다.
+             계엄을 선포한 때에는 대통령은 지체없이 국회에 통고하여야 한다.
+             계엄을 선포한 때에는 대통령은 지체없이 국회에 통고하여야 한다.</p>
+          <p>계엄을 선포한 때에는 대통령은 지체없이 국회에 통고하여야 한다.
+             계엄을 선포한 때에는 대통령은 지체없이 국회에 통고하여야 한다.
+             계엄을 선포한 때에는 대통령은 지체없이 국회에 통고하여야 한다.
+             계엄을 선포한 때에는 대통령은 지체없이 국회에 통고하여야 한다.
+             계엄을 선포한 때에는 대통령은 지체없이 국회에 통고하여야 한다.</p>
+          <p>계엄을 선포한 때에는 대통령은 지체없이 국회에 통고하여야 한다.
+             계엄을 선포한 때에는 대통령은 지체없이 국회에 통고하여야 한다.
+             계엄을 선포한 때에는 대통령은 지체없이 국회에 통고하여야 한다.
+             계엄을 선포한 때에는 대통령은 지체없이 국회에 통고하여야 한다.
+             계엄을 선포한 때에는 대통령은 지체없이 국회에 통고하여야 한다.</p>
+        </div>
+
+    <h2>text-overflow</h2>
+        <p>특정 영역을 벗어나 줄바꿈이 되지 않은 텍스트에 대한 처리방법 설정</p>
+        <p>단, white-space와 overflow 함께 사용하여야 함</p>
+
+          <div id="overflow">
+            <p>계엄을 선포한 때에는 대통령은 지체없이 국회에 통고하여야 한다.
+               계엄을 선포한 때에는 대통령은 지체없이 국회에 통고하여야 한다.
+               계엄을 선포한 때에는 대통령은 지체없이 국회에 통고하여야 한다.
+               계엄을 선포한 때에는 대통령은 지체없이 국회에 통고하여야 한다.
+               계엄을 선포한 때에는 대통령은 지체없이 국회에 통고하여야 한다.</p>
+            <p>계엄을 선포한 때에는 대통령은 지체없이 국회에 통고하여야 한다.
+               계엄을 선포한 때에는 대통령은 지체없이 국회에 통고하여야 한다.
+               계엄을 선포한 때에는 대통령은 지체없이 국회에 통고하여야 한다.
+               계엄을 선포한 때에는 대통령은 지체없이 국회에 통고하여야 한다.
+               계엄을 선포한 때에는 대통령은 지체없이 국회에 통고하여야 한다.</p>
+            <p>계엄을 선포한 때에는 대통령은 지체없이 국회에 통고하여야 한다.
+               계엄을 선포한 때에는 대통령은 지체없이 국회에 통고하여야 한다.
+               계엄을 선포한 때에는 대통령은 지체없이 국회에 통고하여야 한다.
+               계엄을 선포한 때에는 대통령은 지체없이 국회에 통고하여야 한다.
+               계엄을 선포한 때에는 대통령은 지체없이 국회에 통고하여야 한다.</p>
+          </div>
+
+    <h2>text-shadow</h2>
+        <p>CSS3에 추가된 기능</p>
+        <p>텍스트에 그림자 효과를 부여함</p>
+        <p>선택자{그림자수평오프셋 그림자수직오프셋 블러효과 그림자색상}</p>
+
+        <div id="shadow">
+            <p>Infinity War</p>
+            <p>Quantumania</p>
+            <p>End Game</p>
+        </div>
+
+</body>
+</html>
